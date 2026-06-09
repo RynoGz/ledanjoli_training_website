@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 export default function PuppyTrainingPage() {
   return (
     <main>
@@ -19,7 +19,19 @@ export default function PuppyTrainingPage() {
           </p>
         </div>
       </section>
+        <section className="py-16 bg-white">
+  <div className="flex justify-center">
 
+    <Image
+      src="/images/puppy.jpeg"
+      alt="Puppy Training"
+      width={900}
+    height={700}
+    className="rounded-xl shadow-lg max-w-4xl w-full h-auto"
+    />
+
+  </div>
+</section>
       {/* Socialisation */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">

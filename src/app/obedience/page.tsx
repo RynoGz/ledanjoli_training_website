@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 export default function ObediencePage() {
   return (
     <main>
@@ -21,6 +21,19 @@ export default function ObediencePage() {
 
         </div>
       </section>
+      <section className="py-16 bg-white">
+  <div className="flex justify-center">
+
+    <Image
+      src="/images/obedience.jpeg"
+      alt="Obedience Training"
+      width={900}
+    height={700}
+    className="rounded-xl shadow-lg max-w-4xl w-full h-auto"
+    />
+
+  </div>
+</section>
 
       {/* Overview */}
       <section className="py-20 bg-white">

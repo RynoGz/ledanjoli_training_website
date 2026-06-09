@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function AboutPage() {
   return (
     <main>
@@ -43,11 +44,16 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
 
-            <div className="bg-white h-96 rounded-xl shadow-lg flex items-center justify-center">
-              <p className="text-gray-500">
-                Trainer Photo Placeholder
-              </p>
-            </div>
+            <div className="flex justify-center">
+  <Image
+    src="/images/trainer.jpeg"
+    alt="Trainer"
+    width={350}
+    height={500}
+    priority
+    className="rounded-xl shadow-lg object-cover"
+  />
+</div>
 
             <div>
 

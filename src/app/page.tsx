@@ -1,41 +1,59 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="bg-slate-900 text-white min-h-[80vh] flex items-center">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="uppercase tracking-widest text-green-500 mb-4">
-            Professional Dog Training
-          </p>
+      <section className="relative min-h-[90vh] flex items-center">
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Le Danjoli
-          </h1>
+  <Image
+    src="/images/hero.jpeg"
+    alt="Le Danjoli Dog Training"
+    fill
+    priority
+    className="object-cover"
+  />
 
-          <p className="text-xl text-gray-300 max-w-2xl mb-8">
-            Professional dog training for family pets, working dogs,
-            obedience training, puppy development and protection training.
-          </p>
+  <div className="absolute inset-0 bg-black/70"></div>
 
-          <div className="flex gap-4">
-            <Link
-              href="/contact"
-              className="bg-green-700 hover:bg-green-800 px-6 py-3 rounded-lg font-semibold transition"
-            >
-              Contact Us
-            </Link>
+  <div className="relative z-10 max-w-7xl mx-auto px-6 text-white">
 
-            <Link
-              href="/about"
-              className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition"
-            >
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </section>
+    <p className="uppercase tracking-widest text-green-400 mb-4">
+      Professional Dog Training
+    </p>
+
+    <h1 className="text-5xl md:text-7xl font-bold mb-6">
+      Le Danjoli
+    </h1>
+
+    <p className="text-xl max-w-2xl mb-8">
+      Professional dog training for family pets,
+      working dogs, obedience training,
+      puppy development and protection training.
+    </p>
+
+    <div className="flex gap-4">
+
+      <Link
+        href="/contact"
+        className="bg-green-700 hover:bg-green-800 px-6 py-3 rounded-lg font-semibold transition"
+      >
+        Contact Us
+      </Link>
+
+      <Link
+        href="/about"
+        className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition"
+      >
+        Learn More
+      </Link>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* Training Programs */}
       <section className="py-20 bg-gray-100">
