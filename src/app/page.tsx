@@ -1,65 +1,90 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main>
+      {/* Hero Section */}
+      <section className="bg-slate-900 text-white min-h-[80vh] flex items-center">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="uppercase tracking-widest text-green-500 mb-4">
+            Professional Dog Training
           </p>
+
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            Le Danjoli
+          </h1>
+
+          <p className="text-xl text-gray-300 max-w-2xl mb-8">
+            Professional dog training for family pets, working dogs,
+            obedience training, puppy development and protection training.
+          </p>
+
+          <div className="flex gap-4">
+            <Link
+              href="/contact"
+              className="bg-green-700 hover:bg-green-800 px-6 py-3 rounded-lg font-semibold transition"
+            >
+              Contact Us
+            </Link>
+
+            <Link
+              href="/about"
+              className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Training Programs */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            Training Programs
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+
+            <Link href="/obedience">
+              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
+                <h3 className="text-2xl font-bold mb-4">
+                  Obedience Training
+                </h3>
+
+                <p>
+                  Placeholder information about obedience training.
+                </p>
+              </div>
+            </Link>
+
+            <Link href="/puppy-training">
+              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
+                <h3 className="text-2xl font-bold mb-4">
+                  Puppy Training
+                </h3>
+
+                <p>
+                  Placeholder information about puppy training.
+                </p>
+              </div>
+            </Link>
+
+            <Link href="/bite-work">
+              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full">
+                <h3 className="text-2xl font-bold mb-4">
+                  Protection Training
+                </h3>
+
+                <p>
+                  Placeholder information about protection and bite work training.
+                </p>
+              </div>
+            </Link>
+
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
