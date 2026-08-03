@@ -82,13 +82,9 @@ const toneStyles: Record<
 };
 
 function SectionMarker({
-  number,
-  label,
   ruleClass = "border-[var(--coal)]",
   textClass = "text-[var(--coal)]/65",
 }: {
-  number: string;
-  label: string;
   ruleClass?: string;
   textClass?: string;
 }) {
@@ -96,8 +92,7 @@ function SectionMarker({
     <div
       className={`font-mono flex items-center justify-between gap-6 border-b pb-3 text-[0.68rem] font-semibold uppercase tracking-[0.18em] ${ruleClass} ${textClass}`}
     >
-      <span>{number}</span>
-      <span className="text-right">{label}</span>
+      
     </div>
   );
 }
