@@ -1,91 +1,47 @@
-import Link from "next/link";
-import Image from "next/image";
+import ProgramPage from "@/components/ProgramPage";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Manwork & Protection Training",
+  description:
+    "Controlled manwork and protection training for suitable dogs, built on obedience, handler guidance and responsible development.",
+};
+
 export default function ProtectionTrainingPage() {
   return (
-    <main>
-      {/* Hero */}
-      <section className="bg-slate-900 text-white py-24">
-        <div className="max-w-7xl mx-auto px-6">
-
-          <p className="uppercase tracking-widest text-green-500 mb-4">
-            Protection Training
-          </p>
-
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Advanced Working Dog Development
-          </h1>
-
-          <p className="max-w-3xl text-xl text-gray-300">
-            Placeholder information about protection and bite work training.
-          </p>
-
-        </div>
-      </section>
-        <section className="py-16 bg-white">
-  <div className="flex justify-center">
-
-    <Image
-      src="/images/protection.jpeg"
-      alt="Protection Training"
-     width={900}
-    height={700}
-    className="rounded-xl shadow-lg max-w-4xl w-full h-auto"
+    <ProgramPage
+      programmeNumber="03"
+      tone="protection"
+      eyebrow="Manwork & protection training"
+      title="Structured manwork and protection training."
+      description="A controlled, considered programme for suitable dogs, built on strong obedience, handler guidance and responsible development."
+      image="/images/protection.jpeg"
+      imageAlt=""
+      imagePosition="center center"
+      overviewTitle="Control, structure and suitability come first."
+      overview="Manwork and protection training are specialist paths. Every dog is approached through an honest assessment of temperament, drive and obedience foundation. Training is structured and controlled, with clear handler involvement throughout."
+      focusTitle="The essential foundations"
+      focusItems={[
+        "Temperament and suitability assessment",
+        "Solid obedience and handler control",
+        "Clear commands and responsible handling",
+        "Controlled protection work for suitable dogs",
+        "Progression appropriate to the individual dog",
+      ]}
+      pathways={[
+        {
+          title: "Competition & certification training",
+          description:
+            "For breeders, handlers and owners preparing a dog for manwork-related certifications, evaluations, shows or competitions. The training is shaped around the relevant standard, while maintaining control and clear handler communication.",
+        },
+        {
+          title: "Personal protection training",
+          description:
+            "For owners who want to develop a suitable dog for personal or property protection. The focus is on controlled protection work, reliable obedience, handler control and teaching the dog to respond appropriately to commands—not uncontrolled aggression.",
+        },
+      ]}
+      closingTitle="Discuss the right manwork path for your dog."
+      closingText="Use the enquiry page to tell us about your dog’s background and the kind of structured training you are considering."
     />
-
-  </div>
-</section>
-      {/* Overview */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-
-          <h2 className="text-4xl font-bold mb-8">
-            What Is Protection Training?
-          </h2>
-
-          <p className="text-lg text-gray-700">
-            Placeholder text describing the purpose of protection training.
-          </p>
-
-        </div>
-      </section>
-
-      {/* Requirements */}
-      <section className="py-20 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-
-          <h2 className="text-4xl font-bold mb-8">
-            Requirements
-          </h2>
-
-          <ul className="space-y-4 text-lg">
-            <li>✔ Stable Temperament</li>
-            <li>✔ Solid Obedience Foundation</li>
-            <li>✔ Good Health</li>
-            <li>✔ Appropriate Drive Levels</li>
-          </ul>
-
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-slate-900 text-white text-center">
-
-        <h2 className="text-4xl font-bold mb-6">
-          Interested In Protection Training?
-        </h2>
-
-        <p className="mb-8">
-          Contact us to discuss whether your dog is suitable.
-        </p>
-
-        <Link
-          href="/contact"
-          className="bg-green-700 hover:bg-green-800 px-6 py-3 rounded-lg font-semibold"
-        >
-          Contact Us
-        </Link>
-
-      </section>
-    </main>
   );
 }

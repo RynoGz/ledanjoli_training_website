@@ -1,95 +1,52 @@
-import Link from "next/link";
-import Image from "next/image";
+import ProgramPage from "@/components/ProgramPage";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Obedience Training",
+  description:
+    "Tailored obedience training for advanced goals, everyday control and responsible support with challenging behaviour.",
+};
+
 export default function ObediencePage() {
   return (
-    <main>
-      {/* Hero */}
-      <section className="bg-slate-900 text-white py-24">
-        <div className="max-w-7xl mx-auto px-6">
-
-          <p className="uppercase tracking-widest text-green-500 mb-4">
-            Obedience Training
-          </p>
-
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Build a Well-Mannered Dog
-          </h1>
-
-          <p className="max-w-3xl text-xl text-gray-300">
-            Placeholder text describing the obedience training program.
-          </p>
-
-        </div>
-      </section>
-      <section className="py-16 bg-white">
-  <div className="flex justify-center">
-
-    <Image
-      src="/images/obedience.jpeg"
-      alt="Obedience Training"
-      width={900}
-    height={700}
-    className="rounded-xl shadow-lg max-w-4xl w-full h-auto"
+    <ProgramPage
+      programmeNumber="01"
+      tone="obedience"
+      eyebrow="Obedience training"
+      title="Obedience training for every level of ambition."
+      description="From advanced competition preparation to stronger everyday control and support with challenging behaviour, training is tailored to the dog and the owner’s goals."
+      image="/images/obedience.jpeg"
+      imageAlt=""
+      imagePosition="center center"
+      overviewTitle="Clear training for different owners and different goals."
+      overview="Obedience training is not one programme for every dog. Le Danjoli works with breeders, handlers, experienced owners and everyday dog owners, shaping the training around the standard of obedience and level of support each dog-and-owner team needs."
+      focusTitle="What strong obedience can build"
+      focusItems={[
+        "Better communication and handler confidence",
+        "Reliable obedience around everyday distractions",
+        "Practical control for home, walks and public spaces",
+        "Structured preparation for higher standards of training",
+        "Safer management strategies for difficult behaviour",
+      ]}
+      pathways={[
+        {
+          title: "Advanced obedience, certifications & shows",
+          description:
+            "For breeders, handlers and owners aiming for a higher obedience standard. Training can support preparation for certifications, evaluations, dog shows and competitions, with focused work toward the requirements of each goal.",
+        },
+        {
+          title: "Advanced everyday obedience",
+          description:
+            "For owners who want dependable obedience beyond basic at-home training. The focus is on better control, communication and confidence in the situations that come up in everyday life.",
+        },
+        {
+          title: "Reactive & aggressive dogs",
+          description:
+            "For owners managing reactive, difficult or aggressive behaviour. Training focuses on improving control, addressing unwanted behaviour and giving the owner safer, more confident management tools. Each dog is assessed individually, with no unrealistic promises of a complete cure.",
+        },
+      ]}
+      closingTitle="Find the right obedience path for your dog."
+      closingText="Use the enquiry page to share your dog’s age, experience and the goals you would like to work toward."
     />
-
-  </div>
-</section>
-
-      {/* Overview */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-
-          <h2 className="text-4xl font-bold mb-8">
-            What Is Obedience Training?
-          </h2>
-
-          <p className="text-lg text-gray-700">
-            Placeholder text.
-          </p>
-
-        </div>
-      </section>
-
-      {/* Skills */}
-      <section className="py-20 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-
-          <h2 className="text-4xl font-bold mb-8">
-            Skills Your Dog Will Learn
-          </h2>
-
-          <ul className="space-y-4 text-lg">
-            <li>✔ Sit</li>
-            <li>✔ Stay</li>
-            <li>✔ Down</li>
-            <li>✔ Recall</li>
-            <li>✔ Loose-Leash Walking</li>
-          </ul>
-
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-slate-900 text-white text-center">
-        <div className="max-w-4xl mx-auto px-6">
-
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Get Started?
-          </h2>
-
-          <p className="mb-8">
-            Contact us to discuss your dog training needs.
-          </p>
-
-          <Link
-            href="/contact"
-            className="bg-green-700 hover:bg-green-800 px-6 py-3 rounded-lg font-semibold"
-          >
-            Contact Us
-          </Link>
-
-        </div>
-      </section>
-    </main>
   );
 }
